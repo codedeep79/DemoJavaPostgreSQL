@@ -32,6 +32,16 @@ public class DemoDB {
 			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
+		}finally{
+		      try
+		      {
+			 if(conn != null)
+			    conn.close();
+		      }
+		      catch(SQLException se)
+		      {
+			 se.printStackTrace();
+		      }
 		}
 	}
 
